@@ -102,12 +102,6 @@ The complete SQL queries are available in:
 
 ---
 
-## 📸 SQL Query 
-
-![Q1 Revenue by Gender](Screenshots/SQL_Outputs/q1_revenue_by_gender.png)
-
----
-
 ## 📊 Power BI Dashboard
 
 An interactive Power BI dashboard was developed to provide a visual overview of customer shopping behaviour and business performance.
