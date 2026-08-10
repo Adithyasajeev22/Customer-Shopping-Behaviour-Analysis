@@ -102,69 +102,9 @@ The complete SQL queries are available in:
 
 ---
 
-## 📸 SQL Query Outputs
-
-The following screenshots show the outputs generated from the MySQL business analysis queries.
-
-### Q1. Revenue by Gender
-
-#### SQL Query
-
-    SELECT 
-        gender,
-        SUM(purchase_amount) AS revenue
-    FROM customer
-    GROUP BY gender;
-
-#### Output
+## 📸 SQL Query 
 
 ![Q1 Revenue by Gender](Screenshots/SQL_Outputs/q1_revenue_by_gender.png)
-
----
-
-### Q2. Customers Who Used Discount but Spent Above Average
-
-#### SQL Query
-
-    SELECT 
-        customer_id,
-        purchase_amount
-    FROM customer
-    WHERE discount_applied = 'Yes'
-    AND purchase_amount >= (
-        SELECT AVG(purchase_amount)
-        FROM customer
-    );
-
-#### Output
-
-![Q2 Discount Customers](Screenshots/SQL_Outputs/q2_discount_customers.png)
-
----
-
-### Q3. Top 5 Products with Highest Average Review Rating
-
-#### SQL Query
-
-    SELECT 
-        item_purchased,
-        ROUND(AVG(review_rating), 2) AS average_product_rating
-    FROM customer
-    GROUP BY item_purchased
-    ORDER BY average_product_rating DESC
-    LIMIT 5;
-
-#### Output
-
-![Q3 Top Rated Products](Screenshots/SQL_Outputs/q3_top_rated_products.png)
-
----
-
-### Q4. Category Analysis
-
-#### Output
-
-![Q4 Category Analysis](Screenshots/SQL_Outputs/q4_category_analysis.png)
 
 ---
 
