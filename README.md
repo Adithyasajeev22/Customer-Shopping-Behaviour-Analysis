@@ -42,43 +42,6 @@ The analysis helps identify customer preferences, purchasing trends, popular pro
 
 ---
 
-## 📂 Project Structure
-
-Customer-Shopping-Behaviour-Analysis/
-│
-├── 📁 Dashboard/
-│   ├── 📊 customer_behavior_dashboard_powerbi.pbix
-│   └── 🖼️ customer_behaviour_dashboard_png.png
-│
-├── 📁 Dataset/
-│   └── 📄 customer_shopping_behavior.csv
-│
-├── 📁 Problem_Statement/
-│   └── 📄 Problem Statement.pdf
-│
-├── 📁 Report/
-│   └── 📄 Customer_Shopping_Behaviour_Analysis_Report.pdf
-│
-├── 📁 SQL/
-│   └── 📄 Customer_Behaviour_SQL_Queries.sql
-│
-├── 📁 Screenshots/
-│   ├── 📁 Dashboard/
-│   │   ├── 🖼️ dashboard_overview.png
-│   │   ├── 🖼️ sales_analysis.png
-│   │   └── 🖼️ customer_analysis.png
-│   │
-│   └── 📁 SQL_Outputs/
-│       ├── 🖼️ q1_revenue_by_gender.png
-│       ├── 🖼️ q2_discount_customers.png
-│       ├── 🖼️ q3_top_rated_products.png
-│       └── 🖼️ q4_category_analysis.png
-│
-├── 📓 Customer_Shopping_Behavior_Analysis.ipynb
-│
-└── 📄 README.md
-
----
 
 ## 🔄 Project Workflow
 
