@@ -47,20 +47,28 @@ The analysis helps identify customer preferences, purchasing trends, popular pro
 
 Raw Dataset
      ↓
+     
 Data Understanding
      ↓
+     
 Data Cleaning & Preprocessing
      ↓
+     
 Exploratory Data Analysis
      ↓
+     
 Customer Behaviour Analysis
      ↓
+     
 SQL Business Analysis
      ↓
+     
 Power BI Dashboard
      ↓
+     
 Business Insights
      ↓
+     
 Recommendations
 
 ---
