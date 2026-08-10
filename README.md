@@ -58,8 +58,9 @@ Customer-Shopping-Behaviour-Analysis/
 ├── 📓 Customer_Shopping_Behavior_Analysis.ipynb
 │
 └── 📄 README.md
+-----
 
-# 🔄 Project Workflow
+## 🔄 Project Workflow
 
 Raw Dataset
      ↓
