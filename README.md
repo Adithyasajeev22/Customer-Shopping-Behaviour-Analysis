@@ -328,15 +328,7 @@ The project can be further enhanced by implementing:
 
 **Data Analytics | Python | SQL | Power BI | Data Visualization**
 
-### GitHub
 
-https://github.com/Adithyasajeev22
-
-### Project Repository
-
-https://github.com/Adithyasajeev22/Customer-Shopping-Behaviour-Analysis
-
----
 
 ## ⭐ Support
 
