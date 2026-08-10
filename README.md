@@ -128,17 +128,7 @@ An interactive Power BI dashboard was developed to provide a visual overview of 
 
 ![Customer Shopping Behaviour Dashboard](Dashboard/customer_behaviour_dashboard_png.png)
 
-### Dashboard Overview
 
-![Dashboard Overview](Screenshots/Dashboard/dashboard_overview.png)
-
-### Sales Analysis
-
-![Sales Analysis](Screenshots/Dashboard/sales_analysis.png)
-
-### Customer Analysis
-
-![Customer Analysis](Screenshots/Dashboard/customer_analysis.png)
 
 ---
 
