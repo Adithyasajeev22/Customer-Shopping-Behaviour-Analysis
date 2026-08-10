@@ -2,9 +2,13 @@
 
 ## 📌 Project Overview
 
-Customer Shopping Behaviour Analysis is an end-to-end Data Analytics project focused on understanding customer purchasing patterns, preferences, spending behaviour, and shopping trends.
+**Customer Shopping Behaviour Analysis** is an end-to-end Data Analytics project focused on understanding customer purchasing patterns, preferences, spending behaviour, and shopping trends.
 
-This project uses Python, SQL, and Power BI to clean, analyze, visualize, and transform customer shopping data into meaningful business insights. The analysis helps identify customer preferences, purchasing trends, popular product categories, and factors that influence customer buying behaviour.
+This project uses **Python, SQL, and Power BI** to clean, analyze, visualize, and transform customer shopping data into meaningful business insights.
+
+The analysis helps identify customer preferences, purchasing trends, popular product categories, and factors that influence customer buying behaviour.
+
+---
 
 ## 🎯 Objectives
 
@@ -20,10 +24,12 @@ This project uses Python, SQL, and Power BI to clean, analyze, visualize, and tr
 - Create an interactive Power BI dashboard
 - Generate useful business insights and recommendations
 
+---
+
 ## 🛠️ Technologies & Tools
 
 | Technology | Purpose |
-|------------|---------|
+|---|---|
 | Python | Data Analysis and Preprocessing |
 | Pandas | Data Manipulation |
 | NumPy | Numerical Analysis |
@@ -34,9 +40,10 @@ This project uses Python, SQL, and Power BI to clean, analyze, visualize, and tr
 | Jupyter Notebook | Data Analysis and EDA |
 | GitHub | Project Repository |
 
+---
+
 ## 📂 Project Structure
 
-```text
 Customer-Shopping-Behaviour-Analysis/
 │
 ├── 📁 Dashboard/
@@ -55,10 +62,23 @@ Customer-Shopping-Behaviour-Analysis/
 ├── 📁 SQL/
 │   └── 📄 Customer_Behaviour_SQL_Queries.sql
 │
+├── 📁 Screenshots/
+│   ├── 📁 Dashboard/
+│   │   ├── 🖼️ dashboard_overview.png
+│   │   ├── 🖼️ sales_analysis.png
+│   │   └── 🖼️ customer_analysis.png
+│   │
+│   └── 📁 SQL_Outputs/
+│       ├── 🖼️ q1_revenue_by_gender.png
+│       ├── 🖼️ q2_discount_customers.png
+│       ├── 🖼️ q3_top_rated_products.png
+│       └── 🖼️ q4_category_analysis.png
+│
 ├── 📓 Customer_Shopping_Behavior_Analysis.ipynb
 │
 └── 📄 README.md
------
+
+---
 
 ## 🔄 Project Workflow
 
@@ -79,6 +99,8 @@ Power BI Dashboard
 Business Insights
      ↓
 Recommendations
+
+---
 
 ## 🐍 Python Data Analysis
 
@@ -106,6 +128,8 @@ Python is used for data cleaning, preprocessing, exploratory data analysis, stat
     import matplotlib.pyplot as plt
     import seaborn as sns
 
+---
+
 ## 🗄️ SQL Analysis
 
 SQL is used to perform business-oriented analysis and answer important questions related to customer shopping behaviour.
@@ -123,9 +147,79 @@ SQL is used to perform business-oriented analysis and answer important questions
 - Shopping trends
 - Customer segmentation analysis
 
-SQL queries are available in:
+### SQL Query File
 
-    SQL/Customer_Behaviour_SQL_Quries.sql
+The complete SQL queries are available in:
+
+    SQL/Customer_Behaviour_SQL_Queries.sql
+
+---
+
+## 📸 SQL Query Outputs
+
+The following screenshots show the outputs generated from the MySQL business analysis queries.
+
+### Q1. Revenue by Gender
+
+#### SQL Query
+
+    SELECT 
+        gender,
+        SUM(purchase_amount) AS revenue
+    FROM customer
+    GROUP BY gender;
+
+#### Output
+
+![Q1 Revenue by Gender](Screenshots/SQL_Outputs/q1_revenue_by_gender.png)
+
+---
+
+### Q2. Customers Who Used Discount but Spent Above Average
+
+#### SQL Query
+
+    SELECT 
+        customer_id,
+        purchase_amount
+    FROM customer
+    WHERE discount_applied = 'Yes'
+    AND purchase_amount >= (
+        SELECT AVG(purchase_amount)
+        FROM customer
+    );
+
+#### Output
+
+![Q2 Discount Customers](Screenshots/SQL_Outputs/q2_discount_customers.png)
+
+---
+
+### Q3. Top 5 Products with Highest Average Review Rating
+
+#### SQL Query
+
+    SELECT 
+        item_purchased,
+        ROUND(AVG(review_rating), 2) AS average_product_rating
+    FROM customer
+    GROUP BY item_purchased
+    ORDER BY average_product_rating DESC
+    LIMIT 5;
+
+#### Output
+
+![Q3 Top Rated Products](Screenshots/SQL_Outputs/q3_top_rated_products.png)
+
+---
+
+### Q4. Category Analysis
+
+#### Output
+
+![Q4 Category Analysis](Screenshots/SQL_Outputs/q4_category_analysis.png)
+
+---
 
 ## 📊 Power BI Dashboard
 
@@ -145,13 +239,35 @@ An interactive Power BI dashboard was developed to provide a visual overview of 
 - Charts and KPIs
 - Business performance insights
 
-### Dashboard Preview
+---
+
+## 🖼️ Dashboard Preview
+
+### Main Dashboard
 
 ![Customer Shopping Behaviour Dashboard](Dashboard/customer_behaviour_dashboard_png.png)
 
-### Power BI File
+### Dashboard Overview
+
+![Dashboard Overview](Screenshots/Dashboard/dashboard_overview.png)
+
+### Sales Analysis
+
+![Sales Analysis](Screenshots/Dashboard/sales_analysis.png)
+
+### Customer Analysis
+
+![Customer Analysis](Screenshots/Dashboard/customer_analysis.png)
+
+---
+
+## 📊 Power BI File
+
+The complete Power BI dashboard file is available in:
 
     Dashboard/customer_behavior_dashboard_powerbi.pbix
+
+---
 
 ## 📈 Key Business Insights
 
@@ -168,6 +284,8 @@ The analysis focuses on identifying important customer and business insights, in
 - Purchase frequency patterns
 - Opportunities for improving customer engagement and sales
 
+---
+
 ## 💡 Business Recommendations
 
 Based on the analysis, businesses can:
@@ -182,6 +300,8 @@ Based on the analysis, businesses can:
 - Understand customer preferences
 - Improve product marketing strategies
 - Use data-driven insights for business decision-making
+
+---
 
 ## 📑 Project Report
 
@@ -202,6 +322,12 @@ The report covers:
 - Business Insights
 - Recommendations
 - Conclusion
+
+### Report File
+
+    Report/Customer_Shopping_Behaviour_Analysis_Report.pdf
+
+---
 
 ## 🚀 How to Run the Project
 
@@ -238,9 +364,9 @@ Execute the notebook cells sequentially to perform:
 
 Open the SQL file:
 
-    SQL/Customer_Behaviour_SQL_Quries.sql
+    SQL/Customer_Behaviour_SQL_Queries.sql
 
-Execute the queries using your preferred SQL environment.
+Execute the queries using MySQL Workbench or your preferred SQL environment.
 
 ### 7. Open the Power BI Dashboard
 
@@ -248,22 +374,27 @@ Open the following file using Microsoft Power BI Desktop:
 
     Dashboard/customer_behavior_dashboard_powerbi.pbix
 
+---
+
 ## 📁 Project Components
 
 | Component | Description |
-|-----------|-------------|
-| Dataset | Customer shopping behaviour dataset |
-| Python Notebook | Data cleaning, EDA, analysis and visualization |
-| SQL Queries | Business-oriented customer analysis |
-| Power BI Dashboard | Interactive visualization and reporting |
-| Problem Statement | Defines the business problem |
-| Project Report | Complete project documentation |
+|---|---|
+| 📊 Dataset | Customer shopping behaviour dataset |
+| 🐍 Python Notebook | Data cleaning, EDA, analysis and visualization |
+| 🗄️ SQL Queries | Business-oriented customer analysis |
+| 📈 Power BI Dashboard | Interactive visualization and reporting |
+| 📋 Problem Statement | Defines the business problem |
+| 📑 Project Report | Complete project documentation |
+| 🖼️ Screenshots | Dashboard and SQL output screenshots |
+
+---
 
 ## 🎓 Skills Demonstrated
 
+### Programming & Data Analysis
+
 - Python
-- SQL
-- Power BI
 - Pandas
 - NumPy
 - Matplotlib
@@ -272,13 +403,38 @@ Open the following file using Microsoft Power BI Desktop:
 - Data Preprocessing
 - Exploratory Data Analysis
 - Statistical Analysis
-- Customer Behaviour Analysis
+
+### SQL & Database
+
+- SQL
+- MySQL
+- Business Query Development
+- Data Aggregation
+- Filtering
+- Grouping
+- Subqueries
 - Business Analysis
-- Data Visualization
+
+### Business Intelligence
+
+- Power BI
 - Dashboard Development
+- KPI Creation
+- Data Visualization
+- Interactive Reports
 - Business Intelligence
 - Data Storytelling
+
+### Other Skills
+
+- Customer Behaviour Analysis
 - Insight Generation
+- Business Recommendations
+- Data-driven Decision Making
+- Git
+- GitHub
+
+---
 
 ## 🔮 Future Scope
 
@@ -293,16 +449,26 @@ The project can be further enhanced by implementing:
 - Automated Power BI dashboard refresh
 - Predictive customer analytics
 
+---
+
 ## 👨‍💻 Author
 
-**Adithya V S**
+### Adithya V S
 
-Data Analytics | Python | SQL | Power BI | Data Visualization
+**Data Analytics | Python | SQL | Power BI | Data Visualization**
+
+### GitHub
+
+https://github.com/Adithyasajeev22
+
+### Project Repository
+
+https://github.com/Adithyasajeev22/Customer-Shopping-Behaviour-Analysis
+
+---
 
 ## ⭐ Support
 
 If you find this project useful, please consider giving the repository a ⭐ on GitHub.
 
-GitHub Repository:
-
-https://github.com/Adithyasajeev22/Customer-Shopping-Behaviour-Analysis
+Thank you for visiting this project! 🙌
