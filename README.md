@@ -36,27 +36,28 @@ This project uses Python, SQL, and Power BI to clean, analyze, visualize, and tr
 
 ## 📂 Project Structure
 
+```text
 Customer-Shopping-Behaviour-Analysis/
 │
-├── Dashboard/
-│   ├── customer_behavior_dashboard_powerbi.pbix
-│   └── customer_behaviour_dashboard_png.png
+├── 📁 Dashboard/
+│   ├── 📊 customer_behavior_dashboard_powerbi.pbix
+│   └── 🖼️ customer_behaviour_dashboard_png.png
 │
-├── Dataset/
-│   └── Customer Shopping Behaviour Dataset
+├── 📁 Dataset/
+│   └── 📄 customer_shopping_behavior.csv
 │
-├── Problem_Statement/
-│   └── Problem Statement
+├── 📁 Problem_Statement/
+│   └── 📄 Problem Statement.pdf
 │
-├── Report/
-│   └── Project Report
+├── 📁 Report/
+│   └── 📄 Customer_Shopping_Behaviour_Analysis_Report.pdf
 │
-├── SQL/
-│   └── Customer_Behaviour_SQL_Quries.sql
+├── 📁 SQL/
+│   └── 📄 Customer_Behaviour_SQL_Queries.sql
 │
-├── Customer_Shopping_Behavior_Analysis.ipynb
+├── 📓 Customer_Shopping_Behavior_Analysis.ipynb
 │
-└── README.md
+└── 📄 README.md
 
 ## 🔄 Project Workflow
 
